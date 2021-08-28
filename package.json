@@ -1,0 +1,22 @@
+{
+    "name": "servicecatalogtools",
+    "displayName": "Service Catalog Tools extension",
+    "description": "Snippets to accelerate and make managing your YAML files easier",
+    "publisher": "ServiceCatalogTools",
+	"license": "MIT",
+    "version": "0.0.3",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "yaml",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+	}
+}
