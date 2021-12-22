@@ -1,0 +1,20 @@
+{
+  "share a portfolio": {
+    "prefix": "*",
+    "body": [
+      "$1:",
+      "  portfolio: \"$1\"",
+      "  product_generation_method: \"${2|copy,import|}\"",
+      "  associations:",
+      "    - \"$3\"",
+      "  share_with:",
+      "    accounts:",
+      "	   - account_id: \"$4\"",
+      "	     regions: $5",
+      "    tags:",
+      "	   - tag: \"$6\"",
+      "	     regions: $5"
+    ],
+    "description": "invoke a lambda"
+  }
+}

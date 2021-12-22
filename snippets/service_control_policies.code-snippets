@@ -1,0 +1,23 @@
+{
+  "service control policy": {
+    "prefix": [
+      "service-control-policy",
+      "*"
+    ],
+    "body": [
+      "$1:",
+      "  description: \"$2\"",
+      "  tags: \"$3\"",
+      "  content: ",
+      "    default: \"$4\"",
+      "  apply_to:",
+      "    accounts:",
+      "	   - account_id: \"$5\"",
+      "    tags:",
+      "	   - tag: \"$6\"",
+      "    ous:",
+      "	   - ou: \"$7\""
+    ],
+    "description": "add service control policy"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "create an policy simulations": {
+    "prefix": [
+      "assert",
+      "assertion",
+      "*"
+    ],
+    "body": [
+      "$1:",
+      "  simulation_type: ${2|principal,custom|}",
+      "  policy_source_arn: ${3}",
+      "  action_names:",
+      "    - ${4}",
+      "  expected_decision: \"${5|allowed,explicitDeny,implicitDeny|}\"",
+      "  execution: \"${6|HUB,SPOKE,ASYNC|}\"",
+      "  simulate_for:",
+      "    accounts:",
+      "	   - account_id: \"$7\"",
+      "	     regions: $8",
+      "    tags:",
+      "	   - tag: \"$9\"",
+      "	     regions: $8"
+    ],
+    "description": "create a policy simulation"
+  }
+}

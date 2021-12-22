@@ -1,0 +1,33 @@
+{
+  "create an assertion": {
+    "prefix": [
+      "assert",
+      "assertion",
+      "*"
+    ],
+    "body": [
+      "$1:",
+      "  expected:",
+      "    source: manifest",
+      "    config",
+      "      value: $2",
+      "  actual:",
+      "    source: boto3",
+      "    config:",
+      "      client: $3",
+      "      call: $4",
+      "      arguments: $5",
+      "      use_paginator: ${6|true,false|}",
+      "      filter: $7",
+      "  execution: \"${8|HUB,SPOKE,ASYNC|}\"",
+      "  assert_for:",
+      "    accounts:",
+      "	   - account_id: \"$9\"",
+      "	     regions: $10",
+      "    tags:",
+      "	   - tag: \"$11\"",
+      "	     regions: $10"
+    ],
+    "description": "create an assertion"
+  }
+}

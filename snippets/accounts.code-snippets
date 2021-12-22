@@ -1,0 +1,108 @@
+{
+  "add an ou": {
+    "prefix": [
+      "ou",
+      "*"
+    ],
+    "body": [
+      "ou: \"$1\"",
+      "  name: \"$2\"",
+      "  default_region: \"$3\"",
+      "  regions_enabled:",
+      "    - \"$4\"",
+      "  tags:",
+      "    - \"$5\""
+    ],
+    "description": "add an ou"
+  },
+  "add an ou with excludes": {
+    "prefix": [
+      "ou",
+      "*"
+    ],
+    "body": [
+      "ou: \"$1\"",
+      "  name: \"$2\"",
+      "  default_region: \"$3\"",
+      "  regions_enabled:",
+      "    - \"$4\"",
+      "  tags:",
+      "    - \"$5\"",
+      "  excludes:",
+      "    accounts:",
+      "      - \"$6\"",
+      "    ous:",
+      "      - \"$7\""
+    ],
+    "description": "add an ou with exclusions"
+  },
+  "add an account_id": {
+    "prefix": [
+      "account_id",
+      "*"
+    ],
+    "body": [
+      "account_id: \"$1\"",
+      "  name: \"$2\"",
+      "  default_region: \"$3\"",
+      "  regions_enabled:",
+      "    - \"$4\"",
+      "  tags:",
+      "    - \"$5\""
+    ],
+    "description": "add an account_id"
+  },
+  "add an account_id with excludes": {
+    "prefix": [
+      "account_id",
+      "*"
+    ],
+    "body": [
+      "account_id: \"/$1\"",
+      "  name: \"$2\"",
+      "  default_region: \"$3\"",
+      "  regions_enabled:",
+      "    - \"$4\"",
+      "  tags:",
+      "    - \"$5\"",
+      "  excludes:",
+      "    accounts:",
+      "      - \"$6\"",
+      "    ous:",
+      "      - \"$7\""
+    ],
+    "description": "add an account_id with exclusions"
+  },
+  "add an account_id with append": {
+    "prefix": [
+      "account_id",
+      "*"
+    ],
+    "body": [
+      "account_id: \"/$1\"",
+      "  name: \"$2\"",
+      "  append:",
+      "    regions_enabled:",
+      "      - \"$3\"",
+      "    tags:",
+      "      - \"$4\""
+    ],
+    "description": "add an account_id with append to add tags or regions"
+  },
+  "add an account_id with overwrite": {
+    "prefix": [
+      "account_id",
+      "*"
+    ],
+    "body": [
+      "account_id: \"/$1\"",
+      "  name: \"$2\"",
+      "  overwrite:",
+      "    regions_enabled:",
+      "      - \"$3\"",
+      "    tags:",
+      "      - \"$4\""
+    ],
+    "description": "add an account_id with overwrite to replace tags or regions"
+  }
+}

@@ -8,7 +8,7 @@
         "type": "git",
         "url": "https://github.com/eamonnfaherty/service-catalog-tools-vscode-extension"
     },
-    "version": "0.0.3",
+    "version": "0.1.1",
     "engines": {
         "vscode": "^1.59.0"
     },
@@ -19,8 +19,40 @@
         "snippets": [
             {
                 "language": "yaml",
-                "path": "./snippets/snippets.code-snippets"
+                "path": "./snippets/parameters.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/accounts.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/assertions.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/codebuild_runs.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/lambda_invocations.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/launch.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/service_control_policies.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/simulate_policies.code-snippets"
+            },
+            {
+                "language": "yaml",
+                "path": "./snippets/spoke_local_portfolios.code-snippets"
             }
         ]
-	}
+    }
 }

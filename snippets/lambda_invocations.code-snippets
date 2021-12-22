@@ -1,0 +1,25 @@
+{
+  "invoke a lambda": {
+    "prefix": [
+      "lambda-invocation",
+      "invocation",
+      "*"
+    ],
+    "body": [
+      "$1:",
+      "  function_name: \"$2\"",
+      "  qualifier: \"$3\"",
+      "  invocation_type: \"$4\"",
+      "  execution: \"${5|HUB,SPOKE,ASYNC|}\"",
+      "  parameters: $6",
+      "  invoke_for:",
+      "    accounts:",
+      "	   - account_id: \"$7\"",
+      "	     regions: $8",
+      "    tags:",
+      "	   - tag: \"$9\"",
+      "	     regions: $8"
+    ],
+    "description": "invoke a lambda"
+  }
+}

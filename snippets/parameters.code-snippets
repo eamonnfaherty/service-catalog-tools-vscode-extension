@@ -1,0 +1,83 @@
+{
+  "parameter simple": {
+    "prefix": [
+      "parameter",
+      "*"
+    ],
+    "body": [
+      "$1",
+      "  default: \"$2\""
+    ],
+    "description": "parameter simple"
+  },
+  "parameter ssm simple": {
+    "prefix": [
+      "parameter",
+      "parameter-ssm",
+      "*"
+    ],
+    "body": [
+      "$1",
+      "  ssm:",
+      "    name: \"$2\"",
+      "    region: \"$2\""
+    ],
+    "description": "parameter ssm simple"
+  },
+  "parameter ssm hub": {
+    "prefix": [
+      "parameter",
+      "parameter-ssm-hub",
+      "*"
+    ],
+    "body": [
+      "$1",
+      "  ssm:",
+      "    name: \"$2\"",
+      "    region: \"$2\"",
+      "    account_id: \\${AWS::PuppetAccountId\\}"
+    ],
+    "description": "parameter ssm in the hub account (spoke execution compatible)"
+  },
+  "parameter mapping": {
+    "prefix": [
+      "parameter",
+      "*"
+    ],
+    "body": [
+      "$1",
+      "  mapping: \"$2\""
+    ],
+    "description": "parameter mapping"
+  },
+  "parameter boto3": {
+    "prefix": [
+      "parameter",
+      "parameter-boto3",
+      "*"
+    ],
+    "body": [
+      "$1",
+      "  boto3:",
+      "    account_id: $2",
+      "    region: $3",
+      "    client: $4",
+      "    call: $5",
+      "    arguments: $6",
+      "    use_paginator: ${7|true,false|}",
+      "    filter: $8"
+    ],
+    "description": "parameter boto3"
+  },
+  "ssm outputs": {
+    "prefix": [
+      "outputs",
+      "*"
+    ],
+    "body": [
+      "- param_name: $1",
+      "  stack_output: $2"
+    ],
+    "description": "ssm outputs"
+  }
+}

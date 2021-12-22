@@ -5,14 +5,6 @@
 
 Snippets
 - Puppet manifest file
-- - accounts
-- - OUs
-- - stacks
-- - workspaces
-- - apps
-- - launches
-- - lambda invocation
-- - spoke local portfolios
 
 ## Requirements
 
@@ -25,6 +17,15 @@ No known issues
 
 ## Release Notes
 
+
+### 0.1.0
+
+Added
+
+- simulate-policy
+- service-control-policies
+- parameters
+- assertions
 
 ### 0.0.3
 

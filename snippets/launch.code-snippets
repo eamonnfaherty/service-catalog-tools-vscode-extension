@@ -1,0 +1,25 @@
+{
+  "add a launch": {
+    "prefix": [
+      "launch",
+      "*"
+    ],
+    "body": [
+      "$1:",
+      "  portfolio: \"$2\"",
+      "  product: \"$3\"",
+      "  version: \"$4\"",
+      "  execution: \"${5|HUB,SPOKE,ASYNC|}\"",
+      "  parameters: $6",
+      "  deploy_to:",
+      "    accounts:",
+      "	   - account_id: \"$7\"",
+      "	     regions: $8",
+      "    tags:",
+      "	   - tag: \"$9\"",
+      "	     regions: $8",
+      "  outputs: $10"
+    ],
+    "description": "add a launch"
+  }
+}

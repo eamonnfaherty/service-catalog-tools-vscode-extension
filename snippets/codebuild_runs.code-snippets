@@ -1,0 +1,19 @@
+{
+  "start a codebuild project": {
+    "prefix": "*",
+    "body": [
+      "$1:",
+      "  project_name: \"$2\"",
+      "  execution: \"${3|HUB,SPOKE,ASYNC|}\"",
+      "  parameters: $4",
+      "  run_for:",
+      "    accounts:",
+      "	   - account_id: \"$5\"",
+      "	     regions: $6",
+      "    tags:",
+      "	   - tag: \"$7\"",
+      "	     regions: $6"
+    ],
+    "description": "start a codebuild project"
+  }
+}
